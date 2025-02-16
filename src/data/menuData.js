@@ -11,7 +11,7 @@ const menuData = [
         {
           title: "Toast",
           description:
-            "Sourdough, Grain, Fruit, GF with butter/jam/vegemite/marmalade/peanut butter/maple. Fruits, GF +$1.5",
+            "Sourdough, Grain, Fruit, GF with butter/jam/vegemite/marmalade/peanut butter/maple. Fruits,GF +$1.5",
           price: "$8.5",
         },
         {
@@ -157,17 +157,17 @@ const menuData = [
       section: "Chippies",
       items: [
         {
-          title: "Chippies - Chips with Aioli",
+          title: "Chips",
           description: "Served with Aioli",
           price: "$9.5",
         },
         {
-          title: "Chippies - Sweet Potatoes",
+          title: "Sweet Potatoes",
           description: "Served with Aioli",
           price: "$10.5",
         },
         {
-          title: "Chippies - Wedges",
+          title: "Wedges",
           description: "Served with Aioli",
           price: "$11.5",
         },

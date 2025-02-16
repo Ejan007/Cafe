@@ -2,9 +2,11 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className="min-h-screen bg-white text-[#60462c] p-8">
-      <h1 className="text-5xl font-bold text-center mb-6">Contact Us</h1>
-      <p className="text-center text-lg mb-8">We’d love to hear from you! Reach out with any questions or feedback.</p>
+    <div className="min-h-screen bg-gradient-to-r from-[#fbe7c6] to-[#ffe6a7] text-[#60462c] p-8">
+      <h1 className="text-6xl font-bold text-center mb-8 pt-20">Contact Us</h1>
+      <p className="text-center text-xl mb-10">
+        We’d love to hear from you! Reach out with any questions or feedback.
+      </p>
 
       <div className="max-w-2xl mx-auto">
         <form className="space-y-4">
@@ -27,6 +29,15 @@ function Contact() {
           </button>
         </form>
       </div>
+
+      {/* New Catering Section */}
+      <section className="max-w-2xl mx-auto mt-12 p-6 bg-white bg-opacity-90 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-center mb-4">Catering Services</h2>
+        <p className="text-center text-lg">
+          Planning an event? Let us bring our signature Himalayan flavors and cozy ambience
+          right to your doorstep. We cater for birthdays, meetings, weddings and more!
+        </p>
+      </section>
 
       <div className="text-center mt-8">
         <p className="text-lg">📍 123 Coffee Street, Himalayan City</p>
