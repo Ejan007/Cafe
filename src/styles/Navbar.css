@@ -1,0 +1,262 @@
+/* Navbar Container */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+  backdrop-filter: blur(10px); /* Adds a blur effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar Content */
+.navbar-content {
+  max-width: 1700px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+/* Logo */
+.navbar-logo {
+  height: 40px; /* Adjust logo size */
+}
+
+/* Title (Hidden on Mobile) */
+.navbar-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.navbar-title.hidden {
+  display: none; /* Hides the title on small screens */
+}
+
+@media (min-width: 768px) {
+  .navbar-title.hidden {
+    display: inline-block; /* Shows the title on medium and larger screens */
+  }
+}
+
+/* Navigation Links */
+.nav-link {
+  font-size: 1.25rem; /* Larger text size for links */
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.nav-link:hover {
+  color: #e8d9c1; /* Cream hover color */
+}
+
+/* Underline Animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #e8d9c1; /* Matches hover color */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Hamburger Icon */
+button svg {
+  height: 32px; /* Larger icon size for better visibility */
+  width: 32px;
+  color: white;
+}
+
+/* Mobile Dropdown */
+.navbar-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9); /* Darker background for mobile menu */
+  padding: 1rem 0;
+}
+
+/* Mobile Dropdown Links */
+.navbar-dropdown a {
+  font-size: 1.25rem; /* Larger size for links */
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.navbar-dropdown a:hover {
+  color: #e8d9c1; /* Matches desktop hover effect */
+}
+
+/* Navbar Shadows */
+.navbar-container.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly darker when scrolling */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.navbar-title {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .no-select {
+    user-select: none;
+    cursor: default;
+  }
+  
+
+/* src/styles/Navbar.css */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+.navbar-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-links.centered {
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #856746;
+}
+
+.navbar-menu-button {
+  display: none;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  height: 32px;
+  width: 32px;
+  color: white;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.mobile-link {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  color: #856746;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.mobile-link:hover {
+  color: #60462c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-menu-button {
+    display: block;
+  }
+}
+
+
+.scrolled-links .nav-link {
+  color: #60462c !important;
+}
+
+.navbar:not(.scrolled) .nav-link {
+  color: #60462c; /* Dark brown text */
+}
+
+.navbar.scrolled .nav-link {
+  color: #60462c; /* Ensures links stay visible when scrolled */
+}
+
+.white-text {
+  color: white !important; /* Ensures white text */
+}
+.home-links .nav-link {
+  color: white !important;
+}
+
+.scrolled-links .nav-link {
+  color: #60462c !important;
+}
+
+
+
