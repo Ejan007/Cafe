@@ -1,47 +1,127 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// If you need icons, install @fortawesome/free-solid-svg-icons and @fortawesome/free-brands-svg-icons
+// Then import specific icons below. Example:
+import { faMapMarkerAlt, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 function Contact() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#fbe7c6] to-[#ffe6a7] text-[#60462c] p-8">
-      <h1 className="text-6xl font-bold text-center mb-8 pt-20">Contact Us</h1>
-      <p className="text-center text-xl mb-10">
-        We’d love to hear from you! Reach out with any questions or feedback.
+    <div className="min-h-screen pt-20 px-6 bg-[#f5e6d3] text-gray-800">
+      {/* Title & Subheading */}
+      <h1 className="text-4xl font-bold text-center mb-2 pt-40">Let's Connect</h1>
+      <p className="text-center text-lg mb-10">
+        I'm a paragraph. Click here to add your own text and edit me.
+        Let your users get to know you.
       </p>
 
-      <div className="max-w-2xl mx-auto">
-        <form className="space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full p-3 border border-[#856746] rounded-lg"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full p-3 border border-[#856746] rounded-lg"
-          />
-          <textarea
-            placeholder="Your Message"
-            className="w-full p-3 border border-[#856746] rounded-lg h-32"
-          ></textarea>
-          <button className="w-full p-3 bg-[#60462c] text-white rounded-lg hover:bg-[#856746] transition-all">
-            Send Message
-          </button>
-        </form>
-      </div>
+      {/* Two-Column Layout */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-start">
+        {/* Left Column: Contact Form */}
+        <div>
+          <form className="space-y-4">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1">
+                <label htmlFor="firstName" className="block text-sm font-medium mb-1">
+                  First name *
+                </label>
+                <input
+                  id="firstName"
+                  type="text"
+                  placeholder="First name *"
+                  className="w-full p-3 border border-gray-300 rounded"
+                />
+              </div>
+              <div className="flex-1">
+                <label htmlFor="lastName" className="block text-sm font-medium mb-1">
+                  Last name *
+                </label>
+                <input
+                  id="lastName"
+                  type="text"
+                  placeholder="Last name *"
+                  className="w-full p-3 border border-gray-300 rounded"
+                />
+              </div>
+            </div>
 
-      {/* New Catering Section */}
-      <section className="max-w-2xl mx-auto mt-12 p-6 bg-white bg-opacity-90 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-center mb-4">Catering Services</h2>
-        <p className="text-center text-lg">
-          Planning an event? Let us bring our signature Himalayan flavors and cozy ambience
-          right to your doorstep. We cater for birthdays, meetings, weddings and more!
-        </p>
-      </section>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium mb-1">
+                Email *
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email *"
+                className="w-full p-3 border border-gray-300 rounded"
+              />
+            </div>
 
-      <div className="text-center mt-8">
-        <p className="text-lg">📍 123 Coffee Street, Himalayan City</p>
-        <p className="text-lg">📞 (123) 456-7890</p>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium mb-1">
+                Message
+              </label>
+              <textarea
+                id="message"
+                placeholder="Message"
+                className="w-full p-3 border border-gray-300 rounded h-32"
+              ></textarea>
+            </div>
+
+            <button className="w-full p-3 bg-[#596a64] text-white rounded hover:bg-[#46534f] transition-colors">
+              Send
+            </button>
+          </form>
+        </div>
+
+        {/* Vertical Divider (hidden on small screens) */}
+        <div className="hidden md:block w-1 bg-gray-300 h-full mx-auto"></div>
+
+        {/* Right Column: Contact Info */}
+        <div className="grid grid-rows-2 gap-8 text-center">
+          <div className="grid grid-cols-2 gap-4 items-center">
+            {/* Address */}
+            <div className="flex flex-col items-center gap-2">
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="text-lg" />
+              <h3 className="text-md font-semibold">Address</h3>
+              <p className="text-sm">
+                500 Terry Francine St.
+                <br />
+                San Francisco, CA 94158
+              </p>
+            </div>
+            {/* Phone */}
+            <div className="flex flex-col items-center gap-2">
+              <FontAwesomeIcon icon={faPhone} className="text-lg" />
+              <h3 className="text-md font-semibold">Phone</h3>
+              <p className="text-sm">123-456-7890</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4 items-center">
+            {/* Email */}
+            <div className="flex flex-col items-center gap-2">
+              <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
+              <h3 className="text-md font-semibold">Email</h3>
+              <p className="text-sm">info@mysite.com</p>
+            </div>
+            {/* Follow */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="text-lg">👍</div>
+              <h3 className="text-md font-semibold">Follow</h3>
+              <div className="flex justify-center gap-4 text-gray-600">
+                <a href="#" className="hover:text-gray-900" aria-label="Facebook">
+                  <FontAwesomeIcon icon={faFacebookF} />
+                </a>
+                <a href="#" className="hover:text-gray-900" aria-label="Instagram">
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+                <a href="#" className="hover:text-gray-900" aria-label="Twitter">
+                  <FontAwesomeIcon icon={faTwitter} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
