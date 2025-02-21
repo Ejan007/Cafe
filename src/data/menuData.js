@@ -177,13 +177,13 @@ const menuData = [
       section: "Kids Menu",
       items: [
         {
-          title: "Chicken Nuggets with Chips on side",
-          description: "",
+          title: "Chicken Nuggets",
+          description: "Served with chips and tomato sauce.",
           price: "$11",
         },
         {
-          title: "Kids Chicken Burger with chips on side",
-          description: "",
+          title: "Kids Chicken Burger",
+          description: "Serve with chips.",
           price: "$14",
         },
         {
@@ -198,7 +198,7 @@ const menuData = [
         },
         {
           title: "Kids Fish and Chips",
-          description: "",
+          description: "Served with chips and tomato sauce.",
           price: "$11",
         },
         {
