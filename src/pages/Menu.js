@@ -66,7 +66,7 @@ function MenuStyled() {
       </div>
       <button
         onClick={handleDownload}
-        className="fixed top-36 right-5 bg-gradient-to-r from-[#a67c52] to-[#6e3f1b] text-white px-3 py-2 text-xs md:px-6 md:py-3 md:text-base rounded-full shadow-xl hover:scale-105 transform transition duration-300 flex items-center space-x-2"
+        className="fixed bottom-5 right-5 z-50 bg-gradient-to-r from-[#a67c52] to-[#6e3f1b] text-white px-3 py-2 text-xs md:px-6 md:py-3 md:text-base rounded-full shadow-xl hover:scale-105 transform transition duration-300 flex items-center space-x-2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
