@@ -66,7 +66,7 @@ function MenuStyled() {
       </div>
       <button
         onClick={handleDownload}
-        className="fixed top-40 right-10 bg-[#8b5e34] text-white px-4 py-2 rounded-lg shadow-md hover:bg-[#6e3f1b] transition duration-300"
+        className="fixed top-40 right-10 bg-[#8b5e34] text-white px-2 py-1 text-xs md:px-4 md:py-2 md:text-base rounded-lg shadow-md hover:bg-[#6e3f1b] transition duration-300"
       >
         Download Menu
       </button>
