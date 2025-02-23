@@ -144,7 +144,7 @@ function Home() {
     <motion.div
       className="flex flex-col items-center"
       whileHover={{ scale: 1.1 }}
-      transition={{ duration: 0.3 }}
+  z    transition={{ duration: 0.3 }}
     >
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -193,55 +193,113 @@ function Home() {
   </div>
 </motion.section>
 
-<section className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-10 pb-0 px-6 bg-white">
-  {/* Left Column: Text */}
-  <div>
-    <h1 className="text-6xl font-bold font-serif mb-4">Eat.</h1>
-    <h2 className="text-lg text-gray-700 mb-2">
-      Breakfast, Lunch, and Cakes
-    </h2>
-    <p className="text-base text-gray-600 mb-4">
-    From hearty breakfasts that start your day off right to indulgent cakes, 
-    our menu celebrates the joy of good food. Whether you’re looking for a light lunch or a sweet treat, 
-    we bring you the finest flavors and ingredients in every bite, because every meal should be a delicious occasion.
-    </p>
-  </div>
+{/* Mobile Layout */}
+<div className="block md:hidden bg-white pt-10 pb-0 px-6">
+  <div className="max-w-screen-2xl mx-auto flex flex-col gap-8">
+    {/* Eat – Text only */}
+    <div>
+      <h1 className="text-6xl font-bold font-serif mb-4">Eat.</h1>
+      <h2 className="text-lg text-gray-700 mb-2">
+        Breakfast, Lunch, and Cakes
+      </h2>
+      <p className="text-base text-gray-600 mb-4">
+        From hearty breakfasts that start your day off right to indulgent cakes, 
+        our menu celebrates the joy of good food. Whether you’re looking for a light lunch or a sweet treat, 
+        we bring you the finest flavors and ingredients in every bite, because every meal should be a delicious occasion.
+      </p>
+    </div>
 
-  {/* Right Column: Image */}
-  <div>
-    <img
-      src="sec/img5.jpg"
-      alt="Delicious dish"
-      className="w-full h-auto object-cover rounded-md shadow-md"
-    />
-  </div>
-</section>
-<section className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-10 pb-0 px-6 bg-white">
-  {/* Left Column: Image */}
-  <div>
-    <img
-      src="sec/img3.jpg"  // Update with your image path
-      alt="Delicious dish"
-      className="w-full h-full object-cover rounded-md shadow-md"
-    />
-  </div>
+    {/* Left Column Image */}
+    <div>
+      <img
+        src="sec/img3.jpg"  // Update with your image path
+        alt="Delicious dish"
+        className="w-full h-auto object-cover rounded-md shadow-md"
+      />
+    </div>
 
-  {/* Right Column: Content */}
-  <div>
-    <h1 className="text-6xl font-bold font-serif mb-4">Drink</h1>
-    <h2 className="text-lg text-gray-700 mb-2">
-      Great Coffee, Made Right
-    </h2>
-    <p className="text-base text-gray-600 mb-4">
-    Enjoy our freshly brewed coffee made from quality beans. Every cup is a simple, satisfying treat to brighten your day    </p>
-    <a 
-      href="#more" 
-      className="inline-block border border-black text-black px-4 py-2 rounded hover:bg-black hover:text-white transition-colors"
-    >
-      See More
-    </a>
+    {/* Drink – Text only */}
+    <div>
+      <h1 className="text-6xl font-bold font-serif mb-4">Drink</h1>
+      <h2 className="text-lg text-gray-700 mb-2">
+        Great Coffee, Made Right
+      </h2>
+      <p className="text-base text-gray-600 mb-4">
+        Enjoy our freshly brewed coffee made from quality beans. Every cup is a simple, satisfying treat to brighten your day.
+      </p>
+      <a 
+        href="#more" 
+        className="inline-block border border-black text-black px-4 py-2 rounded hover:bg-black hover:text-white transition-colors"
+      >
+        See More
+      </a>
+    </div>
+
+    {/* Right Column Image */}
+    <div>
+      <img
+        src="sec/img5.jpg"
+        alt="Delicious dish"
+        className="w-full h-auto object-cover rounded-md shadow-md"
+      />
+    </div>
   </div>
-</section>
+</div>
+
+{/* Desktop Layout */}
+<div className="hidden md:block">
+  {/* Section for "Eat." (Text Left, Image Right) */}
+  <section className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-10 pb-0 px-6 bg-white">
+    {/* Left Column: Text */}
+    <div>
+      <h1 className="text-6xl font-bold font-serif mb-4">Eat.</h1>
+      <h2 className="text-lg text-gray-700 mb-2">
+        Breakfast, Lunch, and Cakes
+      </h2>
+      <p className="text-base text-gray-600 mb-4">
+        From hearty breakfasts that start your day off right to indulgent cakes, 
+        our menu celebrates the joy of good food. Whether you’re looking for a light lunch or a sweet treat, 
+        we bring you the finest flavors and ingredients in every bite, because every meal should be a delicious occasion.
+      </p>
+    </div>
+    {/* Right Column: Image */}
+    <div>
+      <img
+        src="sec/img5.jpg"
+        alt="Delicious dish"
+        className="w-full h-auto object-cover rounded-md shadow-md"
+      />
+    </div>
+  </section>
+
+  {/* Section for "Drink." (Image Left, Text Right) */}
+  <section className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-10 pb-0 px-6 bg-white">
+    {/* Left Column: Image */}
+    <div>
+      <img
+        src="sec/img3.jpg"  // Update with your image path
+        alt="Delicious dish"
+        className="w-full h-auto object-cover rounded-md shadow-md"
+      />
+    </div>
+    {/* Right Column: Content */}
+    <div>
+      <h1 className="text-6xl font-bold font-serif mb-4">Drink</h1>
+      <h2 className="text-lg text-gray-700 mb-2">
+        Great Coffee, Made Right
+      </h2>
+      <p className="text-base text-gray-600 mb-4">
+        Enjoy our freshly brewed coffee made from quality beans. Every cup is a simple, satisfying treat to brighten your day.
+      </p>
+      <a 
+        href="#more" 
+        className="inline-block border border-black text-black px-4 py-2 rounded hover:bg-black hover:text-white transition-colors"
+      >
+        See More
+      </a>
+    </div>
+  </section>
+</div>
 
       {/* Gallery Section */}
       <motion.section
