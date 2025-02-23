@@ -40,6 +40,7 @@ function Navbar() {
       ? "hover:text-[#60462c]"
       : "hover:text-gray-300"
     : "hover:text-[#60462c]";
+  const iconStrokeColor = isHome ? (isScrolled ? "stroke-[#856746]" : "stroke-white") : "stroke-[#856746]"; // this is conditon for the navbar and "X" icon color
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -170,7 +171,7 @@ function Navbar() {
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M6 18L18 6M6 6l12 12"
-                  className={`${isScrolled ? "stroke-[#856746]" : "stroke-white"}`}
+                  className={iconStrokeColor}
                 />
               </svg>
             ) : (
@@ -186,7 +187,7 @@ function Navbar() {
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M4 6h16M4 12h16m-7 6h7"
-                  className={`${isScrolled ? "stroke-[#856746]" : "stroke-white"}`}
+                  className={iconStrokeColor}
                 />
               </svg>
             )}
