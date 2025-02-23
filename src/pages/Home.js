@@ -291,12 +291,6 @@ function Home() {
       <p className="text-base text-gray-600 mb-4">
         Enjoy our freshly brewed coffee made from quality beans. Every cup is a simple, satisfying treat to brighten your day.
       </p>
-      <a 
-        href="#more" 
-        className="inline-block border border-black text-black px-4 py-2 rounded hover:bg-black hover:text-white transition-colors"
-      >
-        See More
-      </a>
     </div>
   </section>
 </div>
@@ -317,7 +311,7 @@ function Home() {
   </p>
 
   {/* Enlarged container for the slider */}
-  <div className="max-w-6xl mx-auto relative rounded-lg shadow-lg h-[600px] overflow-hidden">
+  <div className="max-w-6xl mx-auto relative rounded-lg shadow-lg h-[300px] md:h-[600px] overflow-hidden">
     <AnimatePresence exitBeforeEnter>
       <motion.img
         key={currentImage}
