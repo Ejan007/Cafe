@@ -44,8 +44,8 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <h1 className="text-7xl font-handwritten text-[white] drop-shadow-lg">
-          Sip, Savor, Smile<br /> The Himalayan Brew Experience!!
+          <h1 className="text-5xl md:text-7xl font-handwritten text-white drop-shadow-lg">
+            Sip, Savor, Smile<br /> Himalayan Brew Experience!!
           </h1>
           <motion.p
             className="text-lg mt-4 text-[white] drop-shadow-md font-sans"
@@ -138,30 +138,7 @@ function Home() {
       </motion.p>
     </motion.div>
     
-    {/* Feature 3 - Cozy Ambiance */}
-    <motion.div
-      className="flex flex-col items-center"
-      whileHover={{ scale: 1.1 }}
-      transition={{ duration: 0.3 }}
-    >
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        <FontAwesomeIcon icon={faCoffee} className="text-[#60462c] text-7xl mb-4" />
-      </motion.div>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        className="text-2xl font-semibold text-[#60462c]"
-      >
-        Cozy Ambiance
-      </motion.p>
-    </motion.div>
+   
     
     {/* Feature 4 - Eco-Friendly Practices */}
     <motion.div
@@ -228,12 +205,6 @@ function Home() {
     our menu celebrates the joy of good food. Whether you’re looking for a light lunch or a sweet treat, 
     we bring you the finest flavors and ingredients in every bite, because every meal should be a delicious occasion.
     </p>
-    <a 
-      href="#more" 
-      className="inline-block border border-black text-black px-4 py-2 rounded hover:bg-black hover:text-white transition-colors"
-    >
-      See More
-    </a>
   </div>
 
   {/* Right Column: Image */}
@@ -245,7 +216,7 @@ function Home() {
     />
   </div>
 </section>
-<section className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-5 pb-6 bg-white">
+<section className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-10 pb-0 px-6 bg-white">
   {/* Left Column: Image */}
   <div>
     <img
@@ -257,7 +228,7 @@ function Home() {
 
   {/* Right Column: Content */}
   <div>
-    <h1 className="text-6xl font-bold font-serif mb-4">Delight.</h1>
+    <h1 className="text-6xl font-bold font-serif mb-4">Drink</h1>
     <h2 className="text-lg text-gray-700 mb-2">
       Great Coffee, Made Right
     </h2>
