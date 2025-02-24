@@ -80,14 +80,13 @@ function Home() {
 
       {/* Features Section */}
       <motion.section
-  className="pb-40 pt-40 bg-[#f7e5d2] text-center"
+  className="pb-6 pt-6 bg-[#f7e5d2] text-center"
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   viewport={{ once: true }}
   transition={{ duration: 1 }}
 >
-  <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
-    
+  <div className="max-w-8xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center justify-items-center">
     {/* Feature 1 - Quality Beans */}
     <motion.div
       className="flex flex-col items-center"
@@ -112,7 +111,7 @@ function Home() {
         Quality Beans
       </motion.p>
     </motion.div>
-    
+
     {/* Feature 2 - Freshly Brewed */}
     <motion.div
       className="flex flex-col items-center"
@@ -137,14 +136,12 @@ function Home() {
         Freshly Brewed
       </motion.p>
     </motion.div>
-    
-   
-    
-    {/* Feature 4 - Eco-Friendly Practices */}
+
+    {/* Feature 3 - Eco-Friendly Practices */}
     <motion.div
       className="flex flex-col items-center"
       whileHover={{ scale: 1.1 }}
-  z    transition={{ duration: 0.3 }}
+      transition={{ duration: 0.3 }}
     >
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -164,8 +161,8 @@ function Home() {
         Eco-Friendly Practices
       </motion.p>
     </motion.div>
-    
-    {/* Feature 5 - Made with Love */}
+
+    {/* Feature 4 - Made with Love */}
     <motion.div
       className="flex flex-col items-center"
       whileHover={{ scale: 1.1 }}
