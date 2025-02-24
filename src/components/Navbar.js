@@ -91,7 +91,7 @@ function Navbar() {
           )}
         </div>
 
-        {/* Mobile Logo & Title (grid layout with three columns) */}
+        {/* Mobile Logo & Title */}
         <div className="md:hidden grid grid-cols-3 items-center transition-all duration-500">
           <div>
             <Link to="/">
@@ -102,9 +102,9 @@ function Navbar() {
               />
             </Link>
           </div>
-          <div className="text-center">
+          <div className="text-center"> {/* Removed ml-2 from container */}
             <span
-              className="block text-2xl font-bold whitespace-nowrap"
+              className="block text-2xl font-bold whitespace-nowrap -ml-2" // Added -ml-2 to shift left
               style={{ color: isHome && !isScrolled ? "#ffffff" : "#856746" }}
             >
               Cafe Himalayan
@@ -112,8 +112,8 @@ function Navbar() {
             <span
               className="block text-2xl font-bold ml-12"
               style={{
-                color: isHome && !isScrolled ? "#ffffff" : "#856746",
-              }}
+color: isHome && !isScrolled ? "#ffffff" : "#856746",
+}}
             >
               Brew
             </span>
