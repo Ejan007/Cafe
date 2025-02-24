@@ -85,16 +85,16 @@ function Contact() {
               <FontAwesomeIcon icon={faMapMarkerAlt} className="text-lg" />
               <h3 className="text-md font-semibold">Address</h3>
               <p className="text-sm">
-                500 Terry Francine St.
+              72 Anketell and, Reed St S,<br />
                 <br />
-                San Francisco, CA 94158
+                Greenway ACT.
               </p>
             </div>
             {/* Phone */}
             <div className="flex flex-col items-center gap-2">
               <FontAwesomeIcon icon={faPhone} className="text-lg" />
               <h3 className="text-md font-semibold">Phone</h3>
-              <p className="text-sm">123-456-7890</p>
+              <p className="text-sm">0448892194</p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 items-center">

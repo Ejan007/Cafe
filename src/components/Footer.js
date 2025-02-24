@@ -5,7 +5,7 @@ import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-sv
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-8">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
         {/* Hours */}
         <div>
           <h3 className="text-lg font-semibold mb-2">Hours</h3>
@@ -23,7 +23,7 @@ function Footer() {
         {/* Social Media */}
         <div>
           <h3 className="text-lg font-semibold mb-2">Social</h3>
-          <div className="flex space-x-4">
+          <div className="flex justify-center md:justify-start space-x-4">
             <a href="#" aria-label="Facebook" className="hover:text-gray-400">
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
@@ -40,8 +40,8 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Address</h3>
           <p className="text-sm">
-          1-172 Anketell and, Reed St S,<br />
-          Greenway ACT
+            72 Anketell and, Reed St S,<br />
+            Greenway ACT
           </p>
         </div>
 
@@ -49,7 +49,7 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
           <p className="text-sm">Email: info@cafehimalayanbrew.com</p>
-          <p className="text-sm">Phone: (123) 456-7890</p>
+          <p className="text-sm">Phone: 0448892194</p>
         </div>
       </div>
       <div className="mt-8 text-center text-xs text-gray-500">
