@@ -66,7 +66,7 @@ function Home() {
   </motion.a>
 
   <motion.a
-    href="/book-table"
+    href="/Contact"
     className="border border-[#e8d9c1] text-[white] px-6 py-3 rounded-lg text-lg font-medium shadow-lg hover:bg-[#e8d9c1] hover:text-[#60462c] transition-all duration-300"
     whileHover={{ scale: 1.2 }}
   >

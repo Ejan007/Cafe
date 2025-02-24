@@ -13,9 +13,9 @@ function MenuStyled() {
 
   const handleDownload = () => {
     // Replace with the actual path to your PDF file
-    const link = document.createElement('a');
-    link.href = 'menu.pdf';
-    link.download = 'menu.pdf';
+    const link = document.createElement("a");
+    link.href = "menu.pdf";
+    link.download = "menu.pdf";
     link.click();
   };
 
@@ -44,15 +44,19 @@ function MenuStyled() {
                   className="pb-4 mb-4 border-b border-dotted border-gray-300 bg-white p-4 rounded-lg shadow-md"
                 >
                   <div className="flex justify-between items-center w-full">
-                    <h3 className="font-bold text-lg text-[#8b5e34] text-center flex-1">{item.title}</h3>
+                    <h3 className="font-bold text-lg text-[#8b5e34] text-center flex-1">
+                      {item.title}
+                    </h3>
                     {item.price && (
                       <p className="text-sm font-semibold text-gray-800 ml-auto">
-                        {item.price}                       
+                        {item.price}
                       </p>
                     )}
                   </div>
                   {item.description && (
-                    <p className="text-sm text-gray-700 mt-1 text-center">{item.description}</p>
+                    <p className="text-sm text-gray-700 mt-1 text-center">
+                      {item.description}
+                    </p>
                   )}
                 </div>
               ))}
