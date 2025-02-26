@@ -147,6 +147,12 @@ color: isHome && !isScrolled ? "#ffffff" : "#856746",
           >
             Contact
           </Link>
+          <Link
+            to="/Gallery"
+            className={`relative text-lg ${navLinkColor} ${hoverClass} after:block after:h-[2px] after:w-0 after:bg-[#856746] after:transition-all after:duration-300 hover:after:w-full`}
+          >
+            Gallery
+          </Link>
         </motion.div>
 
         {/* Mobile Navigation Button */}
@@ -233,6 +239,13 @@ color: isHome && !isScrolled ? "#ffffff" : "#856746",
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
+              </Link>
+              <Link
+                to="/gallery"
+                className="text-xl text-[#856746] hover:text-[#60462c] transition duration-300"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Gallery
               </Link>
             </div>
           </motion.div>
