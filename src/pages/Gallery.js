@@ -8,10 +8,21 @@ const images = importAll(require.context("../images/", false, /\.(png|jpe?g|svg)
 console.log("Gallery image paths:", images);
 
 function Gallery() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const handlePrev = (e) => {
+    // Prevent propagation so clicking button doesn't close overlay.
+    e.stopPropagation();
+    setSelectedIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    setSelectedIndex((prev) => (prev + 1) % images.length);
+  };
 
   return (
-    <div className="pt-32 p-4">
+    <div className="pt-32 p-4 bg-[#f5e6d3]">
       <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-8">
         Gallery
       </h1>
@@ -22,20 +33,32 @@ function Gallery() {
             src={img}
             alt={`Gallery Image ${index + 1}`}
             className="cursor-pointer object-cover h-40 sm:h-48 w-full rounded shadow hover:opacity-80 transition-opacity"
-            onClick={() => setSelectedImage(img)}
+            onClick={() => setSelectedIndex(index)}
           />
         ))}
       </div>
-      {selectedImage && (
+      {selectedIndex !== null && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 bg-gray-900 bg-opacity-85 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedIndex(null)}
         >
+          <button
+            className="absolute left-8 text-white text-3xl focus:outline-none"
+            onClick={handlePrev}
+          >
+            &#8592;
+          </button>
           <img
-            src={selectedImage}
+            src={images[selectedIndex]}
             alt="Enlarged"
             className="max-h-[90%] max-w-[90%] rounded shadow-lg"
           />
+          <button
+            className="absolute right-8 text-white text-3xl focus:outline-none"
+            onClick={handleNext}
+          >
+            &#8594;
+          </button>
         </div>
       )}
     </div>

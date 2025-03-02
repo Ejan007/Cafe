@@ -1,24 +1,21 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// If you need icons, install @fortawesome/free-solid-svg-icons and @fortawesome/free-brands-svg-icons
-// Then import specific icons below. Example:
 import { faMapMarkerAlt, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 function Contact() {
   return (
-    <div className="min-h-screen pt-20 px-6 bg-[#f5e6d3] text-gray-800">
+    <div className="min-h-screen bg-[#f5e6d3] text-gray-800">
       {/* Title & Subheading */}
-      <h1 className="text-4xl font-bold text-center mb-2 pt-40">Let's Connect</h1>
-      <p className="text-center text-lg mb-10">
-        I'm a paragraph. Click here to add your own text and edit me.
-        Let your users get to know you.
-      </p>
+      <div className="container mx-auto text-center pt-36 pb-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-3">Contact Us</h1>
+       
+      </div>
 
       {/* Two-Column Layout */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-start">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-start pb-12">
         {/* Left Column: Contact Form */}
-        <div>
+        <div className="bg-white rounded-xl shadow-xl p-8">
           <form className="space-y-4">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1">
@@ -78,46 +75,50 @@ function Contact() {
         <div className="hidden md:block w-1 bg-gray-300 h-full mx-auto"></div>
 
         {/* Right Column: Contact Info */}
-        <div className="grid grid-rows-2 gap-8 text-center">
-          <div className="grid grid-cols-2 gap-4 items-center">
-            {/* Address */}
-            <div className="flex flex-col items-center gap-2">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="text-lg" />
-              <h3 className="text-md font-semibold">Address</h3>
-              <p className="text-sm">
-              72 Anketell and, Reed St S,<br />
-                <br />
-                Greenway ACT.
-              </p>
+        <div className="bg-white rounded-xl shadow-xl p-8">
+          <p className="text-base text-gray-700 mb-6 text-center">
+            Planning an event, booking a table, or have a general inquiry? We're here to help! Send us a message with your catering, reservation, or other questions, and our team will respond promptly.
+          </p>
+          <div className="grid grid-rows-2 gap-8 text-center mt-4">
+            <div className="grid grid-cols-2 gap-4 items-center">
+              {/* Address */}
+              <div className="flex flex-col items-center gap-2">
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="text-lg" />
+                <h3 className="text-md font-semibold">Address</h3>
+                <p className="text-sm">
+                  72 Anketell and, Reed St S,<br />
+                  Greenway ACT.
+                </p>
+              </div>
+              {/* Phone */}
+              <div className="flex flex-col items-center gap-2">
+                <FontAwesomeIcon icon={faPhone} className="text-lg" />
+                <h3 className="text-md font-semibold">Phone</h3>
+                <p className="text-sm">0448892194</p>
+              </div>
             </div>
-            {/* Phone */}
-            <div className="flex flex-col items-center gap-2">
-              <FontAwesomeIcon icon={faPhone} className="text-lg" />
-              <h3 className="text-md font-semibold">Phone</h3>
-              <p className="text-sm">0448892194</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4 items-center">
-            {/* Email */}
-            <div className="flex flex-col items-center gap-2">
-              <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
-              <h3 className="text-md font-semibold">Email</h3>
-              <p className="text-sm">info@mysite.com</p>
-            </div>
-            {/* Follow */}
-            <div className="flex flex-col items-center gap-2">
-              <div className="text-lg">👍</div>
-              <h3 className="text-md font-semibold">Follow</h3>
-              <div className="flex justify-center gap-4 text-gray-600">
-                <a href="#" className="hover:text-gray-900" aria-label="Facebook">
-                  <FontAwesomeIcon icon={faFacebookF} />
-                </a>
-                <a href="#" className="hover:text-gray-900" aria-label="Instagram">
-                  <FontAwesomeIcon icon={faInstagram} />
-                </a>
-                <a href="#" className="hover:text-gray-900" aria-label="Twitter">
-                  <FontAwesomeIcon icon={faTwitter} />
-                </a>
+            <div className="grid grid-cols-2 gap-4 items-center">
+              {/* Email */}
+              <div className="flex flex-col items-center gap-2">
+                <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
+                <h3 className="text-md font-semibold">Email</h3>
+                <p className="text-sm">info@mysite.com</p>
+              </div>
+              {/* Follow */}
+              <div className="flex flex-col items-center gap-2">
+                <div className="text-lg">👍</div>
+                <h3 className="text-md font-semibold">Follow</h3>
+                <div className="flex justify-center gap-4 text-gray-600">
+                  <a href="#" className="hover:text-gray-900" aria-label="Facebook">
+                    <FontAwesomeIcon icon={faFacebookF} />
+                  </a>
+                  <a href="#" className="hover:text-gray-900" aria-label="Instagram">
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a href="#" className="hover:text-gray-900" aria-label="Twitter">
+                    <FontAwesomeIcon icon={faTwitter} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
