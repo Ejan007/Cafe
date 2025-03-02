@@ -8,8 +8,9 @@ function Contact() {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
     enquiryType: "General Enquiry",
-    message: "",
+    message: ""
   });
   const [feedback, setFeedback] = useState("");
 
@@ -24,10 +25,8 @@ function Contact() {
     try {
       const res = await fetch("http://localhost:5000/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
       });
       const data = await res.json();
       if (data.success) {
@@ -37,18 +36,19 @@ function Contact() {
           firstName: "",
           lastName: "",
           email: "",
+          phone: "",
           enquiryType: "General Enquiry",
-          message: "",
+          message: ""
         });
       } else {
-        setFeedback("Failed to send message.");
+        setFeedback(data.message || "Failed to send message.");
       }
     } catch (error) {
       setFeedback("Error sending message.");
     }
   };
 
-  // Clear feedback after 3 seconds, you can adjust as needed.
+  // Clear feedback after 3 seconds
   useEffect(() => {
     if (feedback) {
       const timer = setTimeout(() => setFeedback(""), 3000);
@@ -129,7 +129,22 @@ function Contact() {
               />
             </div>
 
-            {/* Enquiry Type Selection */}
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                Phone *
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="text"
+                placeholder="Phone *"
+                className="w-full p-3 border border-gray-300 rounded"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
             <div>
               <label htmlFor="enquiryType" className="block text-sm font-medium mb-1">
                 Enquiry Type *
@@ -140,6 +155,7 @@ function Contact() {
                 className="w-full p-3 border border-gray-300 rounded"
                 value={formData.enquiryType}
                 onChange={handleChange}
+                required
               >
                 <option value="Booking">Booking</option>
                 <option value="Catering">Catering</option>
@@ -149,15 +165,16 @@ function Contact() {
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-1">
-                Message
+                Message *
               </label>
               <textarea
                 id="message"
                 name="message"
-                placeholder="Message"
+                placeholder="Message *"
                 className="w-full p-3 border border-gray-300 rounded h-32"
                 value={formData.message}
                 onChange={handleChange}
+                required
               ></textarea>
             </div>
 

@@ -23,7 +23,7 @@ function Gallery() {
 
   return (
     <div className="pt-32 p-4 bg-[#f5e6d3]">
-      <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-8">
+      <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-8 color-white">
         Gallery
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
