@@ -45,7 +45,7 @@ function Home() {
           transition={{ duration: 1.5 }}
         >
           <h1 className="text-5xl md:text-7xl font-handwritten text-white drop-shadow-lg">
-            Sip, Savor, Smile<br /> Himalayan Brew Experience!!
+            Sip, Savor, Smile<br /> Himalayan Brew Experience.
           </h1>
           <motion.p
             className="text-lg mt-4 text-[white] drop-shadow-md font-sans"
@@ -342,10 +342,10 @@ function Home() {
   <div className="mt-8">
     <motion.a
       href="/gallery"
-      className="px-6 py-3 text-lg font-medium border border-[#60462c] text-[#60462c] rounded-lg shadow-lg hover:bg-[#60462c] hover:text-white transition-all duration-300"
+      className="px-10 py-4 text-xl font-bold border border-[#60462c] text-[#60462c] rounded-full shadow-xl hover:bg-[#60462c] hover:text-white transition-all duration-300"
       whileHover={{ scale: 1.1 }}
     >
-     Our Gallery
+      Our Gallery
     </motion.a>
   </div>
 </motion.section>
