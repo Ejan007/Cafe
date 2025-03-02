@@ -266,35 +266,43 @@ const menuData = [
     section: "Kids Menu",
     items: [
       {
-        title: "Chicken Nuggets",
-        description: "Served with chips and tomato sauce.",
-        price: "$11",
+        title: "Kids Ham and Cheese Toastie",
+        description: "Smoked ham and cheese on toasted soft milk bun.",
+        price: "$7.5",
       },
       {
-        title: "Kids Chicken Burger",
-        description: "Served with chips.",
+        title: "Kids Scrambled Egg",
+        description: "Scrambled egg with toasted soft milk bun.",
+        price: "$12",
+      },
+      {
+        title: "Kids Pancake",
+        description: "Single pancake with maple syrup, ice cream, and berry compote.",
+        price: "$12",
+      },
+      {
+        title: "Kids Chicken Burger (with chips)",
+        description: "Chicken burger served with chips on the side.",
         price: "$14",
       },
       {
         title: "Kids Lunch Box",
-        description:
-          "Ham and cheese toasties on milk bun, brownie, and a side of fruits.",
+        description: "Ham and cheese toastie on a milk bun, brownie, and a side of fruits.",
         price: "$14",
       },
       {
-        title: "Kids Pancake",
-        description:
-          "Choice of maple syrup and ice‑cream or berry compote.",
-        price: "$12",
+        title: "Kids Breakfast Bowl",
+        description: "Porridge with fruits and yogurt.",
+        price: "$14",
       },
       {
         title: "Kids Fish and Chips",
-        description: "Served with chips and tomato sauce.",
+        description: "Fish and chips.",
         price: "$11",
       },
       {
-        title: "Kids Breakfast Bowl",
-        description: "Porridge with a side of fruits and yogurt.",
+        title: "Chicken Nuggets (with chips)",
+        description: "Chicken nuggets served with chips on the side.",
         price: "$14",
       },
     ],
@@ -303,21 +311,20 @@ const menuData = [
     section: "Hot Drinks",
     items: [
       {
-        title: "Short Macchiato/ Espresso",
-        description: "",
+        title: "Coffee (Small / Regular)",
+        description:
+          "Standard brewed coffee. *(Available in variants: Cappuccino, Espresso, Long Black, Macchiato, Piccolo, Flat White, Latte, Mocha, Dirty Chai Latte, Green Tea Latte)*",
         price: "$4.5",
       },
       {
-        title:
-          "English Breakfast, Earl Grey, Green Tea, Peppermint, Chamomile, Honey Chai",
-        description: "",
-        price: "$5",
+        title: "Honey Chai",
+        description: "Honey chai.",
+        price: "$6",
       },
       {
-        title: "Cappuccino / Flat White/ Latte/ Long Black/ Mocha/ Hot Chocolate/ Chai Latte",
-        description:
-          "Add‑ons: Soy, Almond, Oat Milk, Lactose Free Milk, Extra Shot, Mocha, Dirty Chai, Blueberry Jam (Coffee Blend) Flavour Syrup, Decaf - $0.5",
-        price: "$4.5|$5",
+        title: "Teas",
+        description: "Options: English Breakfast, Earl Grey, Green Tea, Peppermint, Chamomile.",
+        price: "$5",
       },
     ],
   },
@@ -325,54 +332,72 @@ const menuData = [
     section: "Cold Drinks",
     items: [
       {
-        title: "Ice Chai Latte / Iced Chocolate",
-        description: "",
-        price: "$7.5",
+        title: "Iced Latte",
+        description: "Iced Latte.",
+        price: "$6.5",
       },
       {
-        title: "Iced Coffee with Ice‑Cream",
-        description: "",
+        title: "Iced Long Black",
+        description: "Iced Long Black.",
+        price: "$6.5",
+      },
+      {
+        title: "Iced Coffee / Chocolate / Chai / Mocha",
+        description:
+          "Choose from Iced Coffee, Iced Chocolate, Iced Chai, or Iced Mocha. *(Add whipped cream for +$0.5)*",
         price: "$7.5",
       },
       {
         title: "Green Tea Milkshake",
-        description: "",
-        price: "$8",
+        description: "Green Tea Milkshake.",
+        price: "$8.5",
       },
       {
-        title: "Ice Long Black",
-        description: "",
-        price: "$6",
+        title: "Soft Drinks",
+        description: "Soft drinks.",
+        price: "$3.7",
       },
       {
-        title: "Iced Latte",
-        description: "",
-        price: "$6",
+        title: "Cloudy Apple / Orange Juice",
+        description: "Cloudy apple juice or orange juice.",
+        price: "$5.5",
       },
       {
         title: "Smoothies",
-        description: "Mango, Banana, Berry",
-        price: "$8",
+        description:
+          "Mango, Banana, Mixed Berry smoothie with choice of fruits, coconut yogurt, oat milk, and agave.",
+        price: "$9",
       },
       {
-        title: "Cloudy Apple Juice / Orange Juice",
-        description: "",
-        price: "$5",
+        title: "Milkshakes (Small / Regular)",
+        description:
+          "Choose from Chocolate, Caramel, Strawberry, or Vanilla. *(Make it thick +$2, alternative milk +$0.7)*",
+        price: "Small: $6 / Regular: $8",
+      },
+    ],
+  },
+  {
+    section: "Extras",
+    items: [
+      {
+        title: "Extra Shot",
+        description: "Add an extra shot of espresso.",
+        price: "+$0.7",
       },
       {
-        title: "Milkshakes",
-        description: "Vanilla, Strawberry, Caramel, Chocolate, Banana",
-        price: "$7",
+        title: "Decaf Option",
+        description: "Switch to decaf.",
+        price: "+$0.7",
       },
       {
-        title: "Make it Thick",
-        description: "",
-        price: "$1",
+        title: "Alternative Milk",
+        description: "Options: Almond, Soy, Oat, or lactose-free.",
+        price: "+$0.7",
       },
       {
-        title: "Alt Milk",
-        description: "",
-        price: "+$0.5",
+        title: "Syrup Addition",
+        description: "Options: Hazelnut, Vanilla, or Caramel.",
+        price: "+$0.7",
       },
     ],
   },

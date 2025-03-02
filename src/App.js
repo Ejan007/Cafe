@@ -22,7 +22,6 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Layout>
-      <Footer />
     </Router>
   );
 }
