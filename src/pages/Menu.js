@@ -20,7 +20,7 @@ function MenuStyled() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#f5e6d3] text-[#333] font-serif relative">
+    <div className="min-h-screen w-full bg-[#f5e6d3] text-[#333] font-manrope relative">
       <div className="max-w-5xl mx-auto py-10 px-4 sm:px-6 lg:px-8 shadow-lg rounded-lg">
         <h1 className="text-5xl md:text-6xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#a67c52] via-[#8b5e34] to-[#6e3f1b]">
           Our Menu
@@ -64,8 +64,7 @@ function MenuStyled() {
           </section>
         ))}
         <p className="text-xs text-center text-gray-500 mt-10">
-          Please inform staff of any allergy or dietary requirements.
-          Weekend Surcharge 10% and Public Holiday 15% Surcharge applies.
+          Please inform staff of any allergy or dietary requirements. Weekend Surcharge 10% and Public Holiday 15% Surcharge applies.
         </p>
       </div>
       <button

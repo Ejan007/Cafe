@@ -70,7 +70,7 @@ function Home() {
     className="border border-[#e8d9c1] text-[white] px-6 py-3 rounded-lg text-lg font-medium shadow-lg hover:bg-[#e8d9c1] hover:text-[#60462c] transition-all duration-300"
     whileHover={{ scale: 1.2 }}
   >
-    Contact Us
+    Book a Table
   </motion.a>
 </div>
 

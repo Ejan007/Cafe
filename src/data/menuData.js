@@ -2,136 +2,119 @@ const menuData = [
   {
     section: "All Day Menu",
     items: [
-      // Original All Day Menu Items
       {
-        title: "Puma Burger (Bacon and Egg Roll)",
+        title: "Toast (Sourdough/Grain)",
         description:
-          "Fried egg, bacon, tasty cheese on milk bun with barbeque and aioli sauce.",
-        price: "$24",
-      },
-      {
-        title: "Toast",
-        description:
-          "Sourdough, grain, fruit, GF options with butter, jam, vegemite, marmalade, peanut butter, or maple. Fruits, GF +$1.5",
+          "Toast served with your choice of butter, jam, vegemite, marmalade, peanut butter, or maple. *(GF Toast available at +$1.50)*",
         price: "$8.5",
       },
       {
-        title: "Eggs your way",
+        title: "Eggs Your Way",
         description:
-          "Eggs on toast. Choice of egg (poached, fried, or scrambled) on sourdough.",
-        price: "$12.5",
+          "Choice of egg (poached, fried, or scrambled) served on sourdough.",
+        price: "$12.50",
       },
       {
-        title: "Green Breakfast",
+        title: "Zaatar Lamb Eggs",
         description:
-          "Eggs your way on toasted sourdough with garden greens, pesto, and halloumi.",
-        price: "$20",
+          "Poached egg on toasted sourdough with labne, lamb kofta, grated cucumber, mint, pomegranate, and zaatar.",
+        price: "$22",
       },
       {
         title: "Smash Avo",
         description:
-          "Smashed avocado on sourdough topped with poached eggs, tomato salsa, and house-made dukka served with ricotta.",
-        price: "$19.5",
-      },
-      {
-        title: "Fruit Salad and Granola Bowl",
-        description:
-          "House-made granola served with seasonal fruits, vanilla yoghurt, and mixed seeds.",
-        price: "$16",
-      },
-      {
-        title: "Porridge/Bircher",
-        description:
-          "Oats with maple syrup, chia seeds, green apples, and cinnamon topped with apple berry compote, vanilla yoghurt, and seasonal fruits.",
-        price: "$19",
+          "Smashed avocado on sourdough with corn and tomato salsa, topped with poached eggs, house‑made dukkah, served with ricotta and beetroot hummus.",
+        price: "$20.50",
       },
       {
         title: "French Toast",
         description:
-          "Brioche French toast with banana, crushed peanuts, vanilla whipped mascarpone, salted caramel, ice cream, and shaved chocolate.",
+          "Brioche French toast served with berry and apple compote, peanuts, vanilla whipped mascarpone, salted caramel, ice cream, and shaved chocolate.",
         price: "$22",
       },
       {
-        title: "Chicken Wrap",
+        title: "Black Rice Pudding",
         description:
-          "Lemon pepper chicken, lettuce, and sliced cheese with barbecue and aioli sauce.",
-        price: "$12",
+          "Black rice pudding made with coconut water, coconut cream, and palm sugar, served with caramelized banana, peanuts, and chocolate syrup.",
+        price: "$19",
       },
       {
-        title: "Classic Egg Benedict",
+        title: "Porridge/Bircher",
         description:
-          "Poached eggs on toasted sourdough with a choice of avo, bacon, or salmon, topped with baby spinach and hollandaise sauce.",
-        price: "$18|$19|$20",
+          "Oats with maple syrup, chia seeds, teff, and green apples with cinnamon, topped with berry compote, vanilla yoghurt, and seasonal fruits.",
+        price: "$19",
       },
       {
-        title: "Himalayan Big Breakfast",
+        title: "Fruit Salad & Granola Bowl",
         description:
-          "Eggs your way on toasted sourdough with sausage, avocado, hash browns, mushrooms, grilled tomatoes, halloumi, and bacon. Add baked beans +$2.",
-        price: "$26",
+          "House‑made granola served with seasonal fruits and vanilla yoghurt, topped with mixed seeds.",
+        price: "$16",
+      },
+      {
+        title: "Zucchini, Corn & Halloumi Fritters",
+        description:
+          "Zucchini and halloumi fritters with labne, garden greens, and tomato relish, topped with a poached egg.",
+        price: "$22.50",
       },
       {
         title: "Pancake with Ice-Cream",
         description:
-          "Fluffy pancakes served with maple syrup, berry and apple compote, and ice-cream.",
+          "Fluffy double pancakes served with maple syrup, berry compote, and ice cream.",
         price: "$21",
+      },
+      {
+        title: "Green Breakfast",
+        description:
+          "Herb‑scrambled free‑range egg with spinach, tomato salsa, and Pecorino, served with your choice of double smoked ham or halloumi on toasted sourdough.",
+        price: "$20.90",
+      },
+      {
+        title: "Veggie Big Breakfast",
+        description:
+          "Toasted sourdough topped with eggs of your choice, halloumi, baked beans, mushrooms, hashbrown, spinach, tomato, and avocado.",
+        price: "$24.90",
+      },
+      {
+        title: "Himalayan Big Breakfast",
+        description:
+          "Eggs your way on toasted sourdough with sausage, avocado, hash brown, mushrooms, grilled tomatoes, and bacon. *(Add baked beans for +$2)*",
+        price: "$26",
+      },
+      {
+        title: "Classic Egg Benedict",
+        description:
+          "Poached eggs on toasted sourdough with your choice of avocado, mushroom, ham, bacon, or salmon, topped with baby spinach and hollandaise sauce.",
+        price: "$20.50",
+      },
+      {
+        title: "Bacon and Egg Roll",
+        description:
+          "Fried egg, bacon, and cheese on a milk bun with barbecue and aioli sauce.",
+        price: "$11.90",
+      },
+      {
+        title: "Chicken-Wrap",
+        description:
+          "Lemon pepper chicken, lettuce, and sliced cheese with barbecue and aioli sauce wrapped in a tortilla.",
+        price: "$13",
+      },
+      {
+        title: "Brekky Burger",
+        description:
+          "Bacon, egg, hashbrown, avocado, and cheese with BBQ and tomato relish on a milk bun.",
+        price: "$15.50",
       },
       {
         title: "Veggie Breakfast Roll",
         description:
-          "Grilled halloumi, fried egg, avocado hummus, and garden greens with homemade aioli on a milk bun.",
-        price: "$13",
-      },
-      // Merged Chippies Items
-      {
-        title: "Chips",
-        description: "Served with aioli.",
-        price: "$9.5",
-      },
-      {
-        title: "Sweet Potatoes",
-        description: "Served with aioli.",
-        price: "$10.5",
-      },
-      {
-        title: "Wedges",
-        description: "Served with aioli.",
-        price: "$11.5",
+          "Grilled halloumi, fried egg, avocado hummus, and garden greens with homemade aioli served on a milk bun.",
+        price: "$13.90",
       },
     ],
   },
   {
     section: "Lunch",
     items: [
-      {
-        title: "Chicken Schnitzel",
-        description:
-          "Crumbed chicken breast served with creamy mushroom sauce and a side of chips or salad.",
-        price: "$24",
-      },
-      {
-        title: "Creamy Mushroom and Chicken Pasta",
-        description:
-          "Chicken, mushrooms, and parmesan served with penne pasta. Add-ons available.",
-        price: "",
-      },
-      {
-        title: "Himalayan Vege Burger",
-        description:
-          "Chickpea and spiced lentil patties with chilli, lettuce, and tomato on a toasted milk bun with capsicum dip and pear relish, served with chips.",
-        price: "$19",
-      },
-      {
-        title: "Pan Fried Salmon",
-        description:
-          "Salmon served with beetroot hummus, garden salad, and house-made salsa.",
-        price: "$25",
-      },
-      {
-        title: "Fish and Chips",
-        description:
-          "Crispy beer battered flathead fillets served with fresh garden salad, chips, and aioli sauce.",
-        price: "$21",
-      },
       {
         title: "Himalayan Bowl",
         description:
@@ -141,32 +124,56 @@ const menuData = [
       {
         title: "Poke Bowl",
         description:
-          "Assorted pickled and fresh vegetables on organic black rice with a choice of salmon, roasted chicken, or mushrooms.",
+          "Assorted pickled and fresh vegetables on organic black rice with fried shallots and choice of Salmon / Roasted Chicken / Mushroom with aioli and tosazu.",
         price: "$24|$23|$22",
       },
       {
-        title: "Hunted Hash",
+        title: "Falafel Plate",
         description:
-          "Farm pork, fennel and chilli sausage with diced bacon, confit potatoes, vegetables, homemade chilli sauce, topped with a fried egg and puff rice.",
-        price: "$24",
+          "Fried falafel with pumpkin hummus and toasted tortilla, served with a side of green salad and labne.",
+        price: "$20.50",
       },
       {
         title: "Cheesy Beef Burger",
         description:
-          "Beef patty with cheese, tomato, onion, pickles, lettuce, and house burger sauce on a toasted milk bun, served with chips.",
-        price: "$19",
+          "Beef patty, cheese, tomato and onion relish, lettuce, and house burger sauce on a toasted milk bun, served with chips.",
+        price: "$20",
       },
       {
-        title: "Crispy Chicken Burger",
+        title: "Katsu Chicken Burger",
         description:
-          "Fried chicken thigh fillet on a milk bun with Japanese pickles, lettuce, and homemade sauce, served with chips.",
-        price: "$19",
+          "Crumbed chicken on a milk bun with Japanese pickles, shallots, lettuce, and homemade bba and aioli sauce, served with chips.",
+        price: "$20",
       },
       {
-        title: "Black Rice Pudding",
+        title: "Himalayan Vegie Burger",
         description:
-          "Black rice with coconut water, coconut cream, palm sugar, caramelized banana, peanuts, and chocolate syrup.",
-        price: "$19",
+          "Chickpea and lentil patties with lettuce, tomato, capsicum dip, and pear relish on toasted milk bun, served with chips.",
+        price: "$20",
+      },
+      {
+        title: "Pan Fried Salmon",
+        description:
+          "Salmon with beetroot hummus and garden salad, topped with house‑made salsa.",
+        price: "$25",
+      },
+      {
+        title: "Fish and Chips",
+        description:
+          "Crispy beer‑battered flathead fillets served with fresh garden salad or chips with aioli sauce.",
+        price: "$21",
+      },
+      {
+        title: "Chicken Pasta",
+        description:
+          "Chicken, mushroom, spinach, and parmesan cheese served with penne pasta.",
+        price: "$23",
+      },
+      {
+        title: "Chicken Schnitzel",
+        description:
+          "Crumbed chicken breast served with creamy mushroom sauce and a side of chips or salad.",
+        price: "$24",
       },
     ],
   },
@@ -176,48 +183,85 @@ const menuData = [
       {
         title: "Pesto Chicken Sandwich",
         description:
-          "Pesto chicken with a slice of cheese, lettuce, caramelised onion, and aioli on sourdough with a side of chips.",
-        price: "$17",
-      },
-      {
-        title: "Reuben Sandwich",
-        description:
-          "Corned beef silverside with Swiss cheese, sauerkraut, house-made pickles, and Russian mayo on sourdough with a side of chips.",
-        price: "$17",
-      },
-      {
-        title: "Turkey Club Sandwich",
-        description:
-          "Turkey, bacon, lettuce, tomato, and mayo on toasted bread served with fries.",
-        price: "$18",
-      },
-      {
-        title: "Ham & Cheese Sandwich",
-        description:
-          "Ham, cheese, lettuce, and mustard on multigrain bread served with a pickle.",
-        price: "$16",
-      },
-      {
-        title: "Veggie Sandwich",
-        description:
-          "Grilled seasonal vegetables with hummus and arugula on ciabatta bread.",
+          "Pesto chicken with a slice of cheese, lettuce, caramelised onion, and aioli on sourdough.",
         price: "$15",
       },
       {
-        title: "Grilled Cheese Sandwich",
+        title: "Reuben Toasties",
         description:
-          "Melted cheddar on sourdough, optionally served with tomato soup for dipping.",
-        price: "$12",
+          "Corned beef silverside with Swiss cheese, sauerkraut, house‑made pickles, and Russian mayo on sourdough.",
+        price: "$15",
       },
       {
-        title: "Chicken Salad Sandwich",
+        title: "Vegan Toasties",
         description:
-          "Shredded chicken with mixed greens, grapes, and light mayo on whole grain bread.",
-        price: "$17",
+          "Zaatar roasted vegetables, chargrilled capsicum, greens, and capsicum hummus on vegan sourdough.",
+        price: "$12.50",
+      },
+      {
+        title: "Smoked Salmon Sandwich",
+        description:
+          "Smoked salmon, lettuce, and cheddar cheese with herb mayo.",
+        price: "$16.50",
+      },
+      {
+        title: "Avo on Toast",
+        description:
+          "Smashed avocado with baked mushroom and sundried tomato.",
+        price: "$12.50",
+      },
+      {
+        title: "BLAT with Aioli",
+        description:
+          "Bacon, lettuce, avocado, and tomato with aioli.",
+        price: "$15",
+      },
+      {
+        title: "BLT with Aioli",
+        description:
+          "Bacon, lettuce, and tomato with aioli.",
+        price: "$14",
+      },
+      {
+        title: "Schnitzel Sandwich",
+        description:
+          "Chicken schnitzel, lettuce, tomato, and cheddar cheese with saffron aioli sauce on sourdough.",
+        price: "$13.50",
       },
     ],
   },
-  
+  {
+    section: "Add-ons",
+    items: [
+      {
+        title: "Choice of Egg",
+        description: "Add a choice of egg.",
+        price: "$2.50",
+      },
+      {
+        title: "Smoked Salmon / Grilled Halloumi / 2 Chicken Sausage",
+        description:
+          "Choose one option: smoked salmon, grilled halloumi, or 2 chicken sausages.",
+        price: "$6",
+      },
+      {
+        title: "Mushroom / Bacon / Ham / 2 Pieces of Hashbrown",
+        description:
+          "Add mushroom, bacon, or ham with 2 pieces of hashbrown.",
+        price: "$4.5",
+      },
+      {
+        title: "Avocado, Grilled Tomato",
+        description: "Add avocado and grilled tomato.",
+        price: "$3.5",
+      },
+      {
+        title: "Ricotta, Asparagus",
+        description: "Add ricotta and asparagus.",
+        price: "$3.5",
+      },
+    ],
+  },
   {
     section: "Kids Menu",
     items: [
@@ -240,7 +284,7 @@ const menuData = [
       {
         title: "Kids Pancake",
         description:
-          "Choice of maple syrup and ice-cream or berry compote.",
+          "Choice of maple syrup and ice‑cream or berry compote.",
         price: "$12",
       },
       {
@@ -271,7 +315,8 @@ const menuData = [
       },
       {
         title: "Cappuccino / Flat White/ Latte/ Long Black/ Mocha/ Hot Chocolate/ Chai Latte",
-        description: "Add-ons: Soy, Almond, Oat Milk, Lactose Free Milk, Extra Shot, Mocha, Dirty Chai, Blueberry Jam (Coffee Blend) Flavour Syrup, Decaf - $0.5",
+        description:
+          "Add‑ons: Soy, Almond, Oat Milk, Lactose Free Milk, Extra Shot, Mocha, Dirty Chai, Blueberry Jam (Coffee Blend) Flavour Syrup, Decaf - $0.5",
         price: "$4.5|$5",
       },
     ],
@@ -285,7 +330,7 @@ const menuData = [
         price: "$7.5",
       },
       {
-        title: "Iced Coffee with Ice-Cream",
+        title: "Iced Coffee with Ice‑Cream",
         description: "",
         price: "$7.5",
       },
