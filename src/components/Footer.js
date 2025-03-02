@@ -9,14 +9,35 @@ function Footer() {
         {/* Hours */}
         <div>
           <h3 className="text-lg font-semibold mb-2">Hours</h3>
-          <ul className="text-sm">
-            <li>Mon: 7:30am - 4pm</li>
-            <li>Tue: 7:30am - 4pm</li>
-            <li>Wed: 7:30am - 4pm</li>
-            <li>Thu: 7:30am - 4pm</li>
-            <li>Fri: 7:30am - 4pm</li>
-            <li>Sat: 8am - 4pm</li>
-            <li>Sun: 8am - 4pm</li>
+          <ul className="text-sm space-y-1">
+            <li className="flex items-center justify-center md:justify-start gap-2 sm:gap-9">
+              <span>Monday:</span>
+              <span>7:30am - 4pm</span>
+            </li>
+            <li className="flex items-center justify-center md:justify-start gap-2 sm:gap-9">
+              <span>Tuesday:</span>
+              <span>7:30am - 4pm</span>
+            </li>
+            <li className="flex items-center justify-center md:justify-start gap-2 sm:gap-3">
+              <span>Wednesday:</span>
+              <span>7:30am - 4pm</span>
+            </li>
+            <li className="flex items-center justify-center md:justify-start gap-2 sm:gap-7">
+              <span>Thursday:</span>
+              <span>7:30am - 4pm</span>
+            </li>
+            <li className="flex items-center justify-center md:justify-start gap-2 sm:gap-12">
+              <span>Friday:</span>
+              <span>7:30am - 4pm</span>
+            </li>
+            <li className="flex items-center justify-center md:justify-start gap-2 sm:gap-8">
+              <span>Saturday:</span>
+              <span>8:00am - 4pm</span>
+            </li>
+            <li className="flex items-center justify-center md:justify-start gap-2 sm:gap-10">
+              <span>Sunday:</span>
+              <span>8:00am - 4pm</span>
+            </li>
           </ul>
         </div>
 
@@ -24,14 +45,23 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Social</h3>
           <div className="flex justify-center md:justify-start space-x-4">
-            <a href="#" aria-label="Facebook" className="hover:text-gray-400">
+            <a
+              href="https://www.facebook.com/people/Cafe-Himalayan-Brew/100094930447837"
+              aria-label="Facebook"
+              className="hover:text-[#1877F2]"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a href="#" aria-label="Instagram" className="hover:text-gray-400">
+            <a
+              href="https://www.instagram.com/cafehimalayanbrew/"
+              aria-label="Instagram"
+              className="hover:text-pink-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="#" aria-label="Twitter" className="hover:text-gray-400">
-              <FontAwesomeIcon icon={faTwitter} />
             </a>
           </div>
         </div>

@@ -269,7 +269,7 @@ function Home() {
     {/* Left Column: Image */}
     <div>
       <img
-        src="sec/img3.jpg"  // Update with your image path
+        src="sec/img8.jpg"  // Update with your image path
         alt="Delicious dish"
         className="w-full h-auto object-cover rounded-md shadow-md"
       />
