@@ -79,7 +79,7 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
           <p className="text-sm">Email: info@cafehimalayanbrew.com</p>
-          <p className="text-sm">Phone: 0448892194</p>
+          <p className="text-sm">Phone: +61 448 892 194</p>
         </div>
       </div>
       <div className="mt-8 text-center text-xs text-gray-500">

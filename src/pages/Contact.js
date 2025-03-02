@@ -205,7 +205,7 @@ function Contact() {
               <div className="flex flex-col items-center gap-2">
                 <FontAwesomeIcon icon={faPhone} className="text-lg" />
                 <h3 className="text-md font-semibold">Phone</h3>
-                <p className="text-sm">0448892194</p>
+                <p className="text-sm">+61 448 892 194</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4 items-center">
@@ -218,14 +218,11 @@ function Contact() {
                 <div className="text-lg">👍</div>
                 <h3 className="text-md font-semibold">Follow</h3>
                 <div className="flex justify-center gap-4 text-gray-600">
-                  <a href="#" className="hover:text-gray-900" aria-label="Facebook">
+                  <a href="#" className="hover:text-[#1877F2]" aria-label="Facebook">
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
-                  <a href="#" className="hover:text-gray-900" aria-label="Instagram">
+                  <a href="#" className="hover:text-pink-500" aria-label="Instagram">
                     <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a href="#" className="hover:text-gray-900" aria-label="Twitter">
-                    <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </div>
               </div>
