@@ -2,6 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -19,6 +20,12 @@ app.options("*", cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public'), {
+  maxAge: '1y',
+  etag: true
+}));
 
 // Create a transporter using Gmail's SMTP
 const transporter = nodemailer.createTransport({

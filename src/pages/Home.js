@@ -10,6 +10,7 @@ import {
   faChevronLeft, 
   faChevronRight 
 } from "@fortawesome/free-solid-svg-icons";
+import ProgressiveImage from "../components/ProgressiveImage";
 
 
 // Function to dynamically load images from the src/img folder
@@ -201,17 +202,25 @@ function Home() {
       </h2>
       <p className="text-base text-gray-600 mb-4">
         From hearty breakfasts that start your day off right to indulgent cakes, 
-        our menu celebrates the joy of good food. Whether you’re looking for a light lunch or a sweet treat, 
+        our menu celebrates the joy of good food. Whether you're looking for a light lunch or a sweet treat, 
         we bring you the finest flavors and ingredients in every bite, because every meal should be a delicious occasion.
       </p>
     </div>
 
     {/* Left Column Image */}
     <div>
-      <img
-        src="sec/img3.jpg"  // Update with your image path
+      <ProgressiveImage
+        src="/sec/img3.jpg"
+        fallbackSrc="/sec/img3.jpg"
         alt="Delicious dish"
         className="w-full h-auto object-cover rounded-md shadow-md"
+        loading="lazy"
+        srcSet="
+          /sec/optimized/img3-300.webp 300w,
+          /sec/optimized/img3-600.webp 600w,
+          /sec/optimized/img3-900.webp 900w
+        "
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
     </div>
 
@@ -229,10 +238,18 @@ function Home() {
 
     {/* Right Column Image */}
     <div>
-      <img
-        src="sec/img5.jpg"
+      <ProgressiveImage
+        src="/sec/img5.jpg"
+        fallbackSrc="/sec/img5.jpg"
         alt="Delicious dish"
         className="w-full h-auto object-cover rounded-md shadow-md"
+        loading="lazy"
+        srcSet="
+          /sec/optimized/img5-300.webp 300w,
+          /sec/optimized/img5-600.webp 600w,
+          /sec/optimized/img5-900.webp 900w
+        "
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
     </div>
   </div>
@@ -250,16 +267,24 @@ function Home() {
       </h2>
       <p className="text-base text-gray-600 mb-4">
         From hearty breakfasts that start your day off right to indulgent cakes, 
-        our menu celebrates the joy of good food. Whether you’re looking for a light lunch or a sweet treat, 
+        our menu celebrates the joy of good food. Whether you're looking for a light lunch or a sweet treat, 
         we bring you the finest flavors and ingredients in every bite, because every meal should be a delicious occasion.
       </p>
     </div>
     {/* Right Column: Image */}
     <div>
-      <img
-        src="sec/img5.jpg"
+      <ProgressiveImage
+        src="/sec/img5.jpg"
+        fallbackSrc="/sec/img5.jpg"
         alt="Delicious dish"
         className="w-full h-auto object-cover rounded-md shadow-md"
+        loading="lazy"
+        srcSet="
+          /sec/optimized/img5-300.webp 300w,
+          /sec/optimized/img5-600.webp 600w,
+          /sec/optimized/img5-900.webp 900w
+        "
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
     </div>
   </section>
@@ -268,10 +293,22 @@ function Home() {
   <section className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-10 pb-0 px-6 bg-white">
     {/* Left Column: Image */}
     <div>
-      <img
-        src="sec/img8.jpg"  // Update with your image path
+      <ProgressiveImage
+        src="/sec/img8.jpg"
+        fallbackSrc="/sec/img8.jpg"
         alt="Delicious dish"
         className="w-full h-auto object-cover rounded-md shadow-md"
+        loading="lazy"
+        srcSet="
+          /sec/optimized/img8-300.webp 300w,
+          /sec/optimized/img8-600.webp 600w,
+          /sec/optimized/img8-900.webp 900w
+        "
+        sizes="(max-width: 768px) 100vw, 50vw"
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = "/sec/img8.jpg";
+        }}
       />
     </div>
     {/* Right Column: Content */}
