@@ -14,7 +14,8 @@ function Contact() {
     email: "",
     phone: "",
     enquiryType: "General Enquiry",
-    message: ""
+    message: "",
+    website: "" // Honeypot field
   });
   const [feedback, setFeedback] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,11 +24,71 @@ function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Validate email format
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Validate phone number format (Australian format)
+  const isValidPhone = (phone) => {
+    const phoneRegex = /^(?:\+61|0)[2-478](?:[ -]?[0-9]){8}$/;
+    return phoneRegex.test(phone.replace(/\s/g, ''));
+  };
+
+  // Check for rate limiting
+  const checkRateLimit = () => {
+    const lastSubmission = localStorage.getItem('lastSubmissionTime');
+    const now = Date.now();
+    const timeLimit = 60000; // 1 minute in milliseconds
+
+    if (lastSubmission && now - parseInt(lastSubmission) < timeLimit) {
+      return false;
+    }
+
+    localStorage.setItem('lastSubmissionTime', now.toString());
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
+      // Security checks
+      if (formData.website) {
+        // Honeypot check - if this field is filled, it's likely a bot
+        console.log("Spam detected");
+        setFeedback("Unable to send message at this time.");
+        return;
+      }
+
+      if (!checkRateLimit()) {
+        setFeedback("Please wait a minute before submitting another message.");
+        return;
+      }
+
+      if (!isValidEmail(formData.email)) {
+        setFeedback("Please enter a valid email address.");
+        return;
+      }
+
+      if (!isValidPhone(formData.phone)) {
+        setFeedback("Please enter a valid Australian phone number.");
+        return;
+      }
+
+      // Additional security checks
+      if (formData.message.length < 10) {
+        setFeedback("Message is too short. Please provide more details.");
+        return;
+      }
+
+      if (formData.message.length > 1000) {
+        setFeedback("Message is too long. Please keep it under 1000 characters.");
+        return;
+      }
+
       const templateParams = {
         from_name: `${formData.firstName} ${formData.lastName}`,
         from_email: formData.email,
@@ -51,7 +112,8 @@ function Contact() {
           email: "",
           phone: "",
           enquiryType: "General Enquiry",
-          message: ""
+          message: "",
+          website: "" // Reset honeypot
         });
       }
     } catch (error) {
@@ -200,6 +262,18 @@ function Contact() {
                 required
                 disabled={isSubmitting}
               ></textarea>
+            </div>
+
+            {/* Honeypot field - hidden from real users */}
+            <div style={{ display: 'none' }}>
+              <input
+                type="text"
+                name="website"
+                value={formData.website}
+                onChange={handleChange}
+                tabIndex="-1"
+                autoComplete="off"
+              />
             </div>
 
             <button
