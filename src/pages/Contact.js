@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import emailjs from '@emailjs/browser';
+
+// Initialize EmailJS
+emailjs.init("IbAD2eHIw7cNzVX2v");
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -13,25 +17,34 @@ function Contact() {
     message: ""
   });
   const [feedback, setFeedback] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Handle input changes for controlled fields
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
     try {
-      const res = await fetch("http://localhost:5000/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
-      const data = await res.json();
-      if (data.success) {
-        setFeedback("Message sent successfully!");
-        // Reset form fields
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        phone: formData.phone,
+        enquiry_type: formData.enquiryType,
+        message: formData.message,
+        subject: `New ${formData.enquiryType} from ${formData.firstName} ${formData.lastName}`
+      };
+
+      const result = await emailjs.send(
+        'service_46j5sqe',    // Your service ID
+        'template_1r26ouo',   // Your template ID
+        templateParams
+      );
+
+      if (result.status === 200) {
+        setFeedback("Thank you! Your message has been sent successfully.");
         setFormData({
           firstName: "",
           lastName: "",
@@ -40,18 +53,19 @@ function Contact() {
           enquiryType: "General Enquiry",
           message: ""
         });
-      } else {
-        setFeedback(data.message || "Failed to send message.");
       }
     } catch (error) {
-      setFeedback("Error sending message.");
+      console.error('Error sending email:', error);
+      setFeedback("Sorry, there was a problem sending your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  // Clear feedback after 3 seconds
+  // Clear feedback after 5 seconds
   useEffect(() => {
     if (feedback) {
-      const timer = setTimeout(() => setFeedback(""), 3000);
+      const timer = setTimeout(() => setFeedback(""), 5000);
       return () => clearTimeout(timer);
     }
   }, [feedback]);
@@ -69,7 +83,11 @@ function Contact() {
       {/* Feedback Message */}
       {feedback && (
         <div className="container mx-auto px-4 sm:px-8 mb-4">
-          <div className="p-4 bg-green-200 text-green-800 font-semibold text-center rounded transition-opacity duration-500">
+          <div className={`p-4 ${
+            feedback.includes("successfully") 
+              ? "bg-green-200 text-green-800" 
+              : "bg-red-200 text-red-800"
+          } font-semibold text-center rounded transition-opacity duration-500`}>
             {feedback}
           </div>
         </div>
@@ -89,11 +107,12 @@ function Contact() {
                   id="firstName"
                   name="firstName"
                   type="text"
-                  placeholder="First name *"
+                  placeholder="First name"
                   className="w-full p-3 border border-gray-300 rounded"
                   value={formData.firstName}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               <div className="flex-1">
@@ -104,11 +123,12 @@ function Contact() {
                   id="lastName"
                   name="lastName"
                   type="text"
-                  placeholder="Last name *"
+                  placeholder="Last name"
                   className="w-full p-3 border border-gray-300 rounded"
                   value={formData.lastName}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
             </div>
@@ -121,11 +141,12 @@ function Contact() {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="Email *"
+                placeholder="Email"
                 className="w-full p-3 border border-gray-300 rounded"
                 value={formData.email}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
               />
             </div>
 
@@ -136,12 +157,13 @@ function Contact() {
               <input
                 id="phone"
                 name="phone"
-                type="text"
-                placeholder="Phone *"
+                type="tel"
+                placeholder="Phone"
                 className="w-full p-3 border border-gray-300 rounded"
                 value={formData.phone}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
               />
             </div>
 
@@ -156,6 +178,7 @@ function Contact() {
                 value={formData.enquiryType}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
               >
                 <option value="Booking">Booking</option>
                 <option value="Catering">Catering</option>
@@ -170,19 +193,21 @@ function Contact() {
               <textarea
                 id="message"
                 name="message"
-                placeholder="Message *"
+                placeholder="Your message"
                 className="w-full p-3 border border-gray-300 rounded h-32"
                 value={formData.message}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full p-3 bg-[#596a64] text-white rounded hover:bg-[#46534f] transition-colors"
+              disabled={isSubmitting}
+              className="w-full p-3 bg-[#596a64] text-white rounded hover:bg-[#46534f] transition-colors disabled:opacity-50"
             >
-              Send
+              {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
@@ -212,7 +237,7 @@ function Contact() {
               <div className="flex flex-col items-center gap-2">
                 <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
                 <h3 className="text-md font-semibold">Email</h3>
-                <p className="text-sm">info@mysite.com</p>
+                <p className="text-sm">contact@cafehimalayanbrew.com.au</p>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="text-lg">👍</div>
